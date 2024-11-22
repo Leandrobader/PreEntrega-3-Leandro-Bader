@@ -70,6 +70,7 @@ body {
 
 /* ----------------------INICIO ESTILOS CARDS -------------------- */
 .card-categorias {
+  position: relative;
   height: 350px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -78,6 +79,23 @@ body {
 .card-categorias:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-categorias .texto-descripcion {
+  position: absolute;
+  bottom: 20px; /* Coloca el texto cerca de la parte inferior de la card */
+  left: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  color: white;
+  font-size: 1.2rem;
+  display: none; /* Inicialmente oculto */
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+.card-categorias:hover .texto-descripcion {
+  display: block; /* Mostrar el texto al hacer hover */
+  opacity: 1;
 }
 
 .card-img {
